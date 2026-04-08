@@ -1,24 +1,32 @@
+import Link from "next/link"
+
 export default function Navbar() {
+  return (
+    <nav className="bg-black text-white px-10 py-4 flex justify-between items-center border-b border-gray-800">
 
- return (
+      <h1 className="text-xl font-bold tracking-wide">
+        Areej Portfolio
+      </h1>
 
- <nav className="bg-black text-white px-10 py-4 flex justify-between">
+      <div className="flex gap-8 text-sm font-medium">
 
-  <h1 className="text-xl font-bold">
-   MyStore
-  </h1>
+        <Link href="/" className="hover:text-gray-400">
+          Home
+        </Link>
 
-  <div className="flex gap-6">
+        <Link href="/about" className="hover:text-gray-400">
+          About
+        </Link>
 
-   <a href="/">Home</a>
+        <Link href="/contact" className="hover:text-gray-400">
+          Contact
+        </Link>
 
-   <a href="/admin/login">
-    Admin
-   </a>
+        <Link href="/admin/login" className="bg-white text-black px-4 py-1 rounded">
+          Admin
+        </Link>
 
-  </div>
-
- </nav>
-
- )
+      </div>
+    </nav>
+  )
 }
